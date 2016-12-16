@@ -5,10 +5,10 @@
 		<listener class-name="utilities.customListener"/>
 	</listeners>
   <test name="Test">
-  <parameter name="browserName" value="saucelabs" />
+  <parameter name="browserName" value="chrome" />
     <packages>
-      <package name="test_scenarios_fahad"/>
-      <!--package name = "test_scenarios_Archana"/>-->
+      <!--package name="test_scenarios_fahad"/>-->
+      <package name = "test_scenarios_archana"/>
     </packages>
     </test>
 <!-- Test -->

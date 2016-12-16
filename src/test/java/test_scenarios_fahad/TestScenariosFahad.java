@@ -22,8 +22,8 @@ public class TestScenariosFahad extends WebDriverFactory {
 		PreTestRequirements.goToPackagesAndFlights();
 		PackagesAndFlights.clickOnFlightOnly();
 		PackagesAndFlights.clickOnRoundtrip();
-		PackagesAndFlights.flyingFromNewyorJFK("jfk");
-		PackagesAndFlights.flyingToLosAngelesLAX();
+		PackagesAndFlights.flyingFrom("jfk");
+		PackagesAndFlights.flyingTo("Los Angeles, CA (LAX-Los Angeles Intl.)");
 		PackagesAndFlights.selectDepartingDateAsTomorrow();
 		PackagesAndFlights.selectReturningDateAsDayAfterTomorrow();
 		PackagesAndFlights.selectTwoAdults();

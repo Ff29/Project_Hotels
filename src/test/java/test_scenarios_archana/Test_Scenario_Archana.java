@@ -14,6 +14,7 @@ import org.testng.annotations.Test;
 import activities.GeneralMethods;
 import activities.PreTestRequirements;
 import page_objects.Help_Page;
+import page_objects.PackagesAndFlights;
 import utilities.WebDriverFactory;
 
 public class Test_Scenario_Archana extends WebDriverFactory  {  
@@ -75,18 +76,43 @@ public class Test_Scenario_Archana extends WebDriverFactory  {
 		System.out.println(b);
 	}    
 
-	  @Test(testName="TA_226")
+	 // @Test(testName="TA_226")
 	  public void TA_226() throws Exception{
 		  PreTestRequirements.goToHelp();;
 		  Help_Page.clickOnHotelRewards();
 		  Help_Page.clickOnGettingStarted();
 		  Help_Page.clickOnViewActivity();
-		  Help_Page.clickOnRewardsActivity();
+		  Help_Page.clickOnRewardActivity();
 		  Thread.sleep(3000);
 		  Help_Page.signIn("abc@gmail.com", "12345");
 		  Help_Page.staySigned();
 		  Help_Page.clickOnSignInActivity();
 		  Help_Page.activityErrorMessage("We don’t recognize");
+		  
+	  }
+	  
+	  /* TRAVEL DETAILS
+	   * User should be able to see aircraft information
+	   * TA_258
+	   */
+	  @Test(testName="TA_258")
+	  public void TA_258() throws Exception{
+		PreTestRequirements.goToPackagesAndFlights();
+		PackagesAndFlights.clickOnFlightOnly();
+		PackagesAndFlights.clickOnRoundtrip();
+		PackagesAndFlights.flyingFrom("New York, NY (JFK-John F. Kennedy Intl.)");
+		PackagesAndFlights.flyingToTravel_Page("dhaka Bangladesh");
+		PackagesAndFlights.selectDepartingDateTomorrow();
+	    PackagesAndFlights.selectReturningDateAsDayAfterTomorrow();
+	    PackagesAndFlights.selectAdult(0);
+	    PackagesAndFlights.selectChild(0);
+	    PackagesAndFlights.checkCheckboxIsNotSelected();
+	    PackagesAndFlights.clickOnSearch();
+	    PackagesAndFlights.clickOnAirlines();
+	    PackagesAndFlights.selectOnAirline();
+	    PackagesAndFlights.clickNO();
+	    PackagesAndFlights.clickOnBaggageFees();
+	    PackagesAndFlights.chooseFlight();
 	  }
 
 	  

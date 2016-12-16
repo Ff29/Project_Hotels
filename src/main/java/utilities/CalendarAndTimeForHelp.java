@@ -16,6 +16,7 @@ public class CalendarAndTimeForHelp {
     /*
      * Calendar where the xpath for the calendar date is in {01/02/17}format for selecting 
      * tomorrow as departing and day after tomorrow for return
+     * and you have select from the next month
      */
     
     public static void chooseNextMonthHelpPage(){
@@ -49,6 +50,7 @@ public class CalendarAndTimeForHelp {
         return actualDateFormat;
     }     
     
+      
     public static String chooseSpecificDate(int year,int month,int date){
         month = month-1;        
         cal.set(year, month, date);
