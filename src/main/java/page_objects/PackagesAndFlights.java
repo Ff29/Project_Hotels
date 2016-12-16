@@ -275,7 +275,10 @@ public class PackagesAndFlights extends GeneralMethods {
 	
 
 	}
-    // Archana travel//TA_258
+    /*
+     *  Archana travel//TA_258
+     *  This section is for Travel Detail page
+     */ 
 	
 	public static By hashMapForTravel_page(String key){
 		HashMap<String, By> travelHash= new HashMap<String, By>();
