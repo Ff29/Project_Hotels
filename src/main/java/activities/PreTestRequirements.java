@@ -25,4 +25,7 @@ public class PreTestRequirements extends GeneralMethods {
 		Landing_Page.clickOnGroups();
 		verifyPageTitle("Group Hotel Quote Request");
 		}
+	public void abc(){
+		
+	}
 	}
