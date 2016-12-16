@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <parameter name="browserName" value="chrome"/>
+  <listeners>
+    <listener class-name="utilities.customListener"/>
+  </listeners>
+  <test name="Test(failed)">
+    <parameter name="browserName" value="chrome"/>
+    <classes>
+      <class name="test_scenarios_archana.Test_Scenario_Archana">
+        <methods>
+          <include name="deleteCookies"/>
+          <include name="TA_258"/>
+          <include name="openDriver"/>
+          <include name="tearDown"/>
+          <include name="goToHomePage"/>
+        </methods>
+      </class> <!-- test_scenarios_archana.Test_Scenario_Archana -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
