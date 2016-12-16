@@ -136,10 +136,10 @@ public class GeneralMethods extends BaseMethods {
 	/*
 	 * Verify taking partial messages
 	 */
-	public  static void verifyPartialMessage(By locator, String expectedText ){
+	public  static void verifyPartialMessage(By locator, String expectedText,int start, int end ){
 		String element = WebDriverFactory.getDriver().findElement(locator).getText();
-		String actualHeader = (element.substring(4, 27));
-		Assert.assertEquals(actualHeader,expectedText);
+		String actualMessage = (element.substring(start, end));
+		Assert.assertEquals(actualMessage,expectedText);
 		}
 	/*
 	 * Selects dropdown option by String value 

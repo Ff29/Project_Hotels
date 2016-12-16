@@ -37,13 +37,13 @@ public class PackagesAndFlights extends GeneralMethods {
 	public static void clickOnRoundtrip() throws IOException{
 		clickOn(getKeyPfFlightOnly("RoundTripLabel"));
 	}
-	public static void flyingFromNewyorJFK(String input) throws IOException{
+	public static void flyingFrom(String input) throws IOException{
 		enterDataIntoTextField(getKeyPfFlightOnly("FlyingFromBox"), "New York, NY JFK");
 		autoCompleteSearchAndClick(getKeyPfFlightOnly("autocompleteList"), input);
 	}
-	public static void flyingToLosAngelesLAX() throws IOException{
+	public static void flyingTo(String input) throws IOException{
 		enterDataIntoTextField(getKeyPfFlightOnly("FlyingToBox"), "Los Angeles, CA LAX");
-		autoCompleteSearchAndClick(getKeyPfFlightOnly("autocompleteList"), "Los Angeles, CA (LAX-Los Angeles Intl.)");
+		autoCompleteSearchAndClick(getKeyPfFlightOnly("autocompleteList"), input);
 	}
 	public static void selectDepartingDateAsTomorrow(){
 		CalendarForPackagesAndFlights.travelDateP(true, getKeyPfFlightOnly("DepartingDateBox"),1);
@@ -103,7 +103,7 @@ public class PackagesAndFlights extends GeneralMethods {
 		clickOn(getKeyPfThingsToDoHashMap("SearchButton"));
 	}
 	public static void verifyHeaderThingsToDo(){
-		verifyPartialMessage(getKeyPfThingsToDoHashMap("headerOfThingsToDo"), "things to do in Orlando");
+		verifyPartialMessage(getKeyPfThingsToDoHashMap("headerOfThingsToDo"), "things to do in Orlando",4,24);
 	}
 	public static void verifyTable(){
 	verifyMessage(getKeyPfThingsToDoHashMap("adventuresHeader"), "Adventures & Excursions avg");	
@@ -273,8 +273,66 @@ public class PackagesAndFlights extends GeneralMethods {
 	}
 	public static void verifyEnterDatesMessage() throws IOException{
 	
-//		WebDriverFactory.waitUntilVsible(By.xpath("//div[@id='edsHeading'][@class='heading']"));
-//		verifyMessage(By.xpath("//div[@id='edsHeading'][@class='heading']"), "Enter your dates for accurate prices and availability");
-	}
 
+	}
+    // Archana travel//TA_258
+	
+	public static By hashMapForTravel_page(String key){
+		HashMap<String, By> travelHash= new HashMap<String, By>();
+		travelHash.put("Airlines",By.cssSelector("#airlineRowContainer_EK"));
+		travelHash.put("AirlineSelect",By.cssSelector("button[data-leg-indexes='1,1']"));
+		travelHash.put("NoThanks",By.cssSelector("#forcedChoiceNoThanks"));
+		travelHash.put("BaggageFees", By.cssSelector("a[href='#flight-leg-0']"));
+		travelHash.put("PreviewAvail",By.cssSelector(".//*[@id='flight-leg-0']//div[2]/div[5]/a"));
+		travelHash.put("flightoption",By.cssSelector("#flights-viewer"));
+		
+		return travelHash.get(key);
+	}
+			
+	public static void flyingToTravel_Page(String input) throws Exception{
+		enterDataIntoTextField(PfFlightOnlyHashMap("FlyingToBox"),"dhaka Bangladesh");
+		autoCompleteSearchAndClick(PfFlightOnlyHashMap("autocompleteList"), input);
+		
+	}
+	public static void selectAdult(int adultCount){
+		dropdownFindAndSelect(PfFlightOnlyHashMap("Adults"), adultCount);
+	}
+	public static void selectChild(int childCount){
+		dropdownByIndex(PfFlightOnlyHashMap("children"), childCount);
+	}
+	
+	public static void clickOnAirlines() throws Exception{
+		clickOn(hashMapForTravel_page("Airlines"));
+		WebDriverFactory.implicitWaitOn(10000);
+	}
+	
+	public static void selectOnAirline() throws Exception{
+		clickOn(hashMapForTravel_page("AirSelect"));
+		WebDriverFactory.implicitWaitOn(10000);
+		clickOn(hashMapForTravel_page("AirSelect"));
+	}
+	public static void clickNO() throws Exception{
+		clickOn(hashMapForTravel_page("NoThanks"));
+		
+	}
+	
+	public static void clickOnBaggageFees() throws Exception{
+		clickOn(hashMapForTravel_page("BaggageFees"));
+	}
+	
+	public static void previewAvailablity() throws Exception{
+		clickOn(hashMapForTravel_page("PreviewAvail"));
+	}
+	public static void chooseFlight(){
+		dropdownFindAndSelect(hashMapForTravel_page("flighoption"), 1);	
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
 }

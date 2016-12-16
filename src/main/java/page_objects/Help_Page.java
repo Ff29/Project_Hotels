@@ -49,7 +49,7 @@ public class Help_Page extends GeneralMethods {
         Help_PageFields.put("PasswordActivity", By.cssSelector("#sign-in-password"));
         Help_PageFields.put("CheckedInBox",By.cssSelector("input[type='checkbox']"));
         Help_PageFields.put("SigninActivity",By.cssSelector("button[type='submit']"));
-        
+        Help_PageFields.put("ActivityErrorMessage", By.xpath(".//div[contains(text(),'We don’t recognize')]"));
         
         return Help_PageFields.get(key);    
     }
@@ -166,17 +166,25 @@ public class Help_Page extends GeneralMethods {
          clickOn(gethelp_pageHashmap("ViewActivity"));
      }
      
-     public static void clickOnSignin(String email,String password) throws IOException{
+     public static void clickOnRewardActivity() throws IOException{
          clickOn(gethelp_pageHashmap("HotelRewardActivity"));
-        enterDataIntoTextField(gethelp_pageHashmap("EmailActivity"), email);
-         enterDataIntoTextField(gethelp_pageHashmap("PasswordActivity"), password);
+        
      }
+    
+     public static void signIn(String email,String password) throws Exception{
+    	 enterDataIntoTextField(gethelp_pageHashmap("EmailActivity"),email);
+    	 enterDataIntoTextField(gethelp_pageHashmap("PasswordActivity"),password);
+     }
+     
      public static void staySigned(){
         checkBoxCheckAndSelect(gethelp_pageHashmap("CheckedInBox")); 
          
      }
      public static void clickOnSignInActivity() throws Exception{
          clickOn(gethelp_pageHashmap("SigninActivity"));
+     }
+     public static void activityErrorMessage(String expected){
+    	 verifyPartialMessage(gethelp_pageHashmap("ActivityErrorMessage"),expected , 0, 18);;
      }
      
 }

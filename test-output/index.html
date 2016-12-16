@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Suite">
-                    <span>C:\ToolsQA\GitRepo\Project_Hotels\testng.xml</span>
+                    <span>C:\Users\Romi1\Hotel_Project\Project_Hotels\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -102,7 +102,7 @@
                     <div class="method-list-content failed suite-Suite">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="test_scenarios_fahad.TestScenariosFahad" hash-for-method="TA5">TA5</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="test_scenarios_archana.Test_Scenario_Archana" hash-for-method="TA_258">TA_258</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
@@ -120,33 +120,20 @@
           <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">test_scenarios_fahad.TestScenariosFahad</span>
+              <span class="class-name">test_scenarios_archana.Test_Scenario_Archana</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="TA5">
-                  </a> <!-- TA5 -->
-                  <span class="method-name">TA5</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 0.097
-  (Session info: chrome=43.0.2357.65)
-  (Driver info: chromedriver=2.15.322448 (52179c1b310fec1797c81ea9a20326839860b7d3),platform=Windows NT 5.2 SP2 x86) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 31.09 seconds
-Build info: version: &apos;3.0.1&apos;, revision: &apos;1969d75&apos;, time: &apos;2016-10-18 09:49:13 -0700&apos;
-System info: host: &apos;Fahad&apos;, ip: &apos;192.168.13.61&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_111&apos;
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, chrome={userDataDir=C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\scoped_dir1784_9198}, takesHeapSnapshot=true, hasMetadata=true, databaseEnabled=false, handlesAlerts=true, version=43.0.2357.65, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, webdriver.remote.sessionid=7c12a92654bc4c25bad5d6cb567a5b0a, locationContextEnabled=true, webStorageEnabled=true, takesScreenshot=true, browserName=chrome, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 7c12a92654bc4c25bad5d6cb567a5b0a
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:274)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at activities.BaseMethods.clickOn(BaseMethods.java:30)
-	at page_objects.Landing_Page.clickOnPackagesAndFlights(Landing_Page.java:34)
-	at activities.PreTestRequirements.goToPackagesAndFlights(PreTestRequirements.java:17)
-	at test_scenarios_fahad.TestScenariosFahad.TA5(TestScenariosFahad.java:109)
-... Removed 29 stack frames
+                  <a name="TA_258">
+                  </a> <!-- TA_258 -->
+                  <span class="method-name">TA_258</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at activities.BaseMethods.clickOn(BaseMethods.java:25)
+	at page_objects.PackagesAndFlights.selectOnAirline(PackagesAndFlights.java:310)
+	at test_scenarios_archana.Test_Scenario_Archana.TA_258(Test_Scenario_Archana.java:112)
+... Removed 25 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -155,7 +142,7 @@ Session ID: 7c12a92654bc4c25bad5d6cb567a5b0a
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\ToolsQA\GitRepo\Project_Hotels\testng.xml</span>
+            <span class="header-content">C:\Users\Romi1\Hotel_Project\Project_Hotels\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -166,12 +153,12 @@ Session ID: 7c12a92654bc4c25bad5d6cb567a5b0a
     &lt;listener class-name=&quot;utilities.customListener&quot;/&gt;
   &lt;/listeners&gt;
   &lt;test name=&quot;Test&quot;&gt;
-    &lt;parameter name=&quot;browserName&quot; value=&quot;saucelabs&quot;/&gt;
+    &lt;parameter name=&quot;browserName&quot; value=&quot;chrome&quot;/&gt;
     &lt;packages&gt;
-      &lt;package name=&quot;test_scenarios_fahad&quot;/&gt;
+      &lt;package name=&quot;test_scenarios_archana&quot;/&gt;
     &lt;/packages&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;test_scenarios_fahad.TestScenariosFahad&quot;/&gt;
+      &lt;class name=&quot;test_scenarios_archana.Test_Scenario_Archana&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -213,14 +200,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'TA5')
-data.setCell(0, 2, 'test_scenarios_fahad.TestScenariosFahad')
-data.setCell(0, 3, 31358);
+data.setCell(0, 1, 'TA_258')
+data.setCell(0, 2, 'test_scenarios_archana.Test_Scenario_Archana')
+data.setCell(0, 3, 30468);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 31 seconds</span>
+              <span class="suite-total-time">Total running time: 30 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -246,28 +233,28 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">test_scenarios_fahad.TestScenariosFahad</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">test_scenarios_archana.Test_Scenario_Archana</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
-                <span class="method-name">openDriver(saucelabs)</span>
+                <span class="method-name">openDriver(chrome)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
-                <span class="method-name">goToHomePage(saucelabs)</span>
-                <span class="method-start">7508 ms</span>
+                <span class="method-name">goToHomePage(chrome)</span>
+                <span class="method-start">35418 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">TA5</span>
-                <span class="method-start">12883 ms</span>
+                <span class="method-name">TA_258</span>
+                <span class="method-start">45243 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">deleteCookies</span>
-                <span class="method-start">50113 ms</span>
+                <span class="method-start">78173 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">50254 ms</span>
+                <span class="method-start">85240 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

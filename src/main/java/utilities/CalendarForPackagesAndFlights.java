@@ -12,7 +12,7 @@ public class CalendarForPackagesAndFlights {
     private static SimpleDateFormat dateFormatMonth= new SimpleDateFormat("MM");
     private static SimpleDateFormat dateFormatYear= new SimpleDateFormat("yyyy");
     private static SimpleDateFormat dateFormatDay= new SimpleDateFormat("dd");
-    
+    private static SimpleDateFormat dateFormat;
     
     public static void travelDateP(Boolean Tomorrow,By locator,int AdddaysFromCurrentDate){
         if(Tomorrow==true){
@@ -40,5 +40,25 @@ public class CalendarForPackagesAndFlights {
        
         return actualDateFormatDay;
     }
-
+    // Archana specific date for travel in package in flights
+   
+//    public static String specificDate(int year,int month, int day){
+//    	month= month-1;
+//    	cal.set(year, month, day);
+//    	String specificDateFormat= dateFormat.format(cal.getTime());
+//    	return specificDateFormat;
+//    }
+//
+//    public static void travelSpecific(By locator,int year,int month, int day){
+//    String departDate= specificDate( year,month,day);
+//    String departmonth=dateFormat.format(cal.g)  	
+//    String formatMonth = dateFormatMonth.format(cal.getTime());
+//        String formatYear = dateFormatYear.format(cal.getTime());
+//        
+//        int actualDateFormatMonth = Integer.parseInt(formatMonth)-1;
+//        String formatDate= dateFormat.
+//        		WebDriverFactory.getDriver().findElement(locator).click();
+//         WebDriverFactory.getDriver().findElement(By.xpath("//table//button[@data-year='"+formatYear+"'][@data-month='"+actualDateFormatMonth+"'][@data-day='"+tomorrow+"']")).click();//static
+//    }
+    
 }
