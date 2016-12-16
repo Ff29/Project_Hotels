@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <parameter name="browserName" value="saucelabs"/>
+  <listeners>
+    <listener class-name="utilities.customListener"/>
+  </listeners>
+  <test name="Test(failed)">
+    <parameter name="browserName" value="saucelabs"/>
+    <classes>
+      <class name="test_scenarios_fahad.TestScenariosFahad">
+        <methods>
+          <include name="deleteCookies"/>
+          <include name="openDriver"/>
+          <include name="tearDown"/>
+          <include name="goToHomePage"/>
+          <include name="TA5"/>
+        </methods>
+      </class> <!-- test_scenarios_fahad.TestScenariosFahad -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
